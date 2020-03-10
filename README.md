@@ -15,9 +15,11 @@ You can also download pre-converted dataset from [Mega](https://mega.nz/#!1htDER
 
 ## How to read the Pickle files
 This is an example of reading the pickle file "Dataset_new.pkl". 
+
 At the end, you will get a list of features named "total_x" and a list of labels "total_y"
 
 ```python
+>>> from six.moves import cPickle as pickle
 >>> f = open("Dataset_new.pkl", "rb")
 >>> letter_set = pickle.load(f, encoding="latin1")
 >>> f.close()
@@ -41,4 +43,26 @@ At the end, you will get a list of features named "total_x" and a list of labels
 ...     print(len(total_x))
 ...
 140000
+```
+
+
+Take a look the structure of label. 
+
+```python
+>>> total_y[:10]
+[[2, (7, 7), (24, 35)],
+ [6, (11, 5), (25, 25)],
+ [5, (8, 2), (23, 28)],
+ [1, (21, 8), (33, 28)],
+ [6, (21, 21), (34, 47)],
+ [0, (19, 6), (33, 26)],
+ [4, (12, 8), (28, 28)],
+ [4, (6, 4), (22, 29)],
+ [1, (15, 6), (25, 26)],
+ [7, (13, 7), (31, 27)]]
+```
+
+The label follows format of 
+```
+[class], [top_left_point_coordinate_tuple], [bottom_right_point_coordinate_tuple]
 ```
