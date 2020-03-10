@@ -1,0 +1,5 @@
+*.pyc
+*.json
+*.tfrecords
+*.pkl
+.ipynb_checkpoints/*
