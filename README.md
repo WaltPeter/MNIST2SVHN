@@ -11,4 +11,4 @@ If you wish to start generating your own dataset from scratch, you can download 
 ## MNIST2SVHN dataset (Converted)
 You can also download pre-converted dataset from <a>Mega</a>
 
-<img src="MNIST2SVHN_sample.png"></img>
+<img src="images/MNIST2SVHN_sample.png"></img>
